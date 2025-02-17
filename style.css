@@ -21,13 +21,15 @@
 
 body {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 375px;
+    grid-template-rows:auto 1fr auto;
     justify-content: center;
-    width: 375px;
-    height: 100vh;
-    font-size: 15px;
     background-color: var(--Very-Light-Gray);
+    
+}
+main {
+    font-size: 15px;
+    
     font-family: "Poppins";
     color: var(--Very-Dark-Blue);
 }
@@ -43,6 +45,16 @@ font-size: 25px;
 .card-text, .card-container  {
     color: var(--Grayish-Blue);
 }
+
+.cards-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.container-cards {
+   
+}
 .card-container {
     width: 312px;
     height: 223px;
@@ -52,6 +64,7 @@ font-size: 25px;
     display: flex;
     flex-direction: column;
     padding: 22px;
+    text-align: left;
     justify-content: space-evenly;
 }
 .card-icon {
