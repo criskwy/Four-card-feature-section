@@ -20,30 +20,26 @@
 
 
 body {
-    display: grid;
-    grid-template-columns: 375px;
-    grid-template-rows:auto 1fr auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: var(--Very-Light-Gray);
-    
-}
-main {
-    font-size: 15px;
-    
-    font-family: "Poppins";
-    color: var(--Very-Dark-Blue);
 }
 
-.card-title {
-font-weight: 200;
-font-size: 25px;
-}
-.card-subtitle, .card-container-subtitle {
-    font-weight: 600;
+main {
+    font-size: 15px;
+    font-family: "Poppins";
     color: var(--Very-Dark-Blue);
-}
-.card-text, .card-container  {
-    color: var(--Grayish-Blue);
+    width: 375px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 95px;
+    margin-bottom: 75px;
+    text-align: center;
+    
 }
 
 .cards-content {
@@ -52,23 +48,83 @@ font-size: 25px;
     justify-content: center;
 
 }
-.container-cards {
-   
+
+
+.card-title {
+font-weight: 200;
+font-size: 23px;
+
 }
+.card-subtitle, .card-container-subtitle {
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 10px;
+}
+.card-text, .card-container  {
+    font-size: 13px;
+    color: var(--Grayish-Blue);
+    margin: 30px;
+    
+}
+.text-card {
+    margin-bottom: auto;
+}
+
+
 .card-container {
     width: 312px;
     height: 223px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px var(--Grayish-Blue);
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 0px 5px 15px rgba(0,0, 0, 0.1), 0px 10px 30px rgba(0,0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 22px;
     text-align: left;
-    justify-content: space-evenly;
+  
 }
+.border-cyan {
+    border-top: 4px solid var(--Cyan);
+}
+
+.border-red {
+    border-top: 4px solid var(--Red);
+}
+
+.border-orange {
+    border-top: 4px solid var(--Orange);
+}
+
+.border-blue {
+    border-top: 4px solid var(--Blue);
+}
+
+
 .card-icon {
     align-self: flex-end;
     width: 55px;
-    height: 55px;
+    
+}
+
+@media screen and (min-width: 700px){
+    main {
+        width: 100%;
+    }
+     
+    .container-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+       
+                
+    }
+    /* .border-orange{
+        grid-column: 2;
+    }
+
+    .border-cyan {
+        grid-column: 1;
+        
+    } */
+ 
 }
